@@ -58,7 +58,7 @@ features$feature <- gsub("[^A-z0-9]","",features$feature)
 which(duplicated(features$feature) == TRUE)
 
 # each duplicate set has 14 elements so:
-features$feature[303:316] <- paste0(features$feature[303:317],"x")
+features$feature[303:316] <- paste0(features$feature[303:316],"x")
 features$feature[317:330] <- paste0(features$feature[317:330],"y")
 features$feature[331:344] <- paste0(features$feature[331:344],"z")
 
@@ -90,6 +90,7 @@ train_x <- as.data.frame(train_x)
 test_x <- as.data.frame(test_x)
 traintest <- as.data.frame(traintest)
 subjects <- as.data.frame(subjects)
+activities <- as.data.frame(activities)
 
 # Rename the lables with the corresponding activity
 traintest$labels <- activities[traintest[1:length(traintest$labels),1],2]
@@ -118,4 +119,5 @@ avgmeanstddata <- aggregate(meanstddata[,3:87],
 setnames(avgmeanstddata, old = names(avgmeanstddata), 
          new = c("activity","subject",paste0("avg",names(avgmeanstddata[,3:87]))))
 
-
+# Remove all data from memory
+rm(list = ls(pattern = "[^(avgmeanstddata)]"))
