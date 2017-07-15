@@ -1,17 +1,17 @@
 CodeBook of "Getting and Cleaning Data Course Project Assignment"
 
 This dataset builds up from the
-==================================================================
+------------------------------------------------------------------
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
-==================================================================
+------------------------------------------------------------------
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Universit‡ degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
-==================================================================
+------------------------------------------------------------------
 
 
 ## Original data
@@ -613,6 +613,7 @@ The original data sets is composed by the following data:
 
 ## Modified data set
 
+### meanstddata
 			"meanstddata": the new data set with extracted all mean and standard deviation of the observations;
 			it has 88 columns for 10299 rows(all observation that merges train and test dataset):
 			1 activity
@@ -705,7 +706,7 @@ The original data sets is composed by the following data:
 			88 anglezgravitymean			
 
 
-
+### avgmeanstddata
 			"avgmeanstddata": the new data set with computed average of all mean and standard deviation of the observations;
 			it has 88 columns and 180 rows (average of all data grouped by activity and subject):
 			1 activity
