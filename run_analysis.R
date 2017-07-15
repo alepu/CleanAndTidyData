@@ -1,4 +1,4 @@
-# "run_analysis.R" is a script elaborate data gathered from the following link
+# "run_analysis.R" is a script that elaborates data gathered from the following link
 # http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 # and does te following operations:
 # 
