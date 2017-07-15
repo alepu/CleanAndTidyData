@@ -119,5 +119,8 @@ avgmeanstddata <- aggregate(meanstddata[,3:87],
 setnames(avgmeanstddata, old = names(avgmeanstddata), 
          new = c("activity","subject",paste0("avg",names(avgmeanstddata[,3:87]))))
 
+# Organize data for activity and subject
+avgmeanstddata <- arrange(avgmeanstddata, activity, subject)
+
 # Remove all data from memory
 rm(list = ls(pattern = "[^(avgmeanstddata)]"))
